@@ -14,9 +14,9 @@ var error_label: RichTextLabel = null
 var failed_files_for_dialog: PackedStringArray = PackedStringArray()
 
 func _ready():
-    _ready2();
+    _initialize();
 
-func _ready2():
+func _initialize():
     
     # Get references to UI elements
     filter_line_edit = %Filter

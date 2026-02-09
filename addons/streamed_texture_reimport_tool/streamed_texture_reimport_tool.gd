@@ -19,8 +19,5 @@ func _stream_texture_import_tool():
     if not window:
         window = ImportWindow.instantiate()
         get_editor_interface().get_base_control().add_child(window)
-        
-        # Call _ready manually to initialize the window
-        window._ready2()
     
     window.popup_centered()

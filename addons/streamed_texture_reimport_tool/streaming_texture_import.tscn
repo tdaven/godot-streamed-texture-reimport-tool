@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8dkb5qrxp0ob"]
 
-[ext_resource type="Script" uid="uid://c8h1s8edbpelp" path="res://addons/streamedtextureimporttool/streaming_texture_import.gd" id="1_bkqma"]
+[ext_resource type="Script" uid="uid://c8h1s8edbpelp" path="res://addons/streamed_texture_reimport_tool/streaming_texture_import.gd" id="1_bkqma"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdp23"]
 content_margin_left = 6.0
