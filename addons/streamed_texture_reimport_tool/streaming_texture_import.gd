@@ -54,12 +54,18 @@ func _ready2():
     tree.set_column_custom_minimum_width(1, 140)
     tree.set_column_custom_minimum_width(2, 90)
     
+    visibility_changed.connect(_on_visibility_changed)
     
     var efs = EditorInterface.get_resource_filesystem()
     efs.scan_sources()
     
     # Load the texture imports
     update_grid_from_imports()
+
+
+func _on_visibility_changed() -> void:
+    if visible:
+        update_grid_from_imports()
 
 
 func _on_cancel_pressed():
@@ -117,7 +123,7 @@ func populate_grid():
     
     # Add filtered paths
     for path in file_paths:
-        var texture: CompressedTexture2D = ResourceLoader.load(path, "CompressedTexture2D", 1)
+        var texture: Texture2D = ResourceLoader.load(path, "", 1)
         if texture == null:
             continue
         var image := texture.get_image()
